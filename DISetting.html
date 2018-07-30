@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Page Title</title>
+</head>
+<body>
+        <h3>在CococsCreator設定 DI </h3>
+        <ol>
+            <li>使用 npm 安裝 Inversify。</li>
+            <br>
+            <li>引入inversify模組 : import { Container, ContainerModule, interfaces } from "inversify";</li>
+            <br>
+            <li>產生一個container : const myContainer = new Container();</li>
+            <br>
+            <li>用inversify的模組來定義物件相依條件 :
+                <p>
+                    let DTBind = new ContainerModule(
+                    <br>
+                    (bind: interfaces.Bind, unbind: interfaces.Unbind) => {
+                    <br>
+                    bind(TestDI).toSelf();});
+                    <br>
+                </p>
+            </li>
+            <br>
+            <li>使用load()來載入定義好的模組 : myContainer.load(DTBind )
+        </ol>
+        <a href="index.html">返回主頁</a>
+
+</body>
+</html>

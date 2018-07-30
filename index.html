@@ -7,42 +7,32 @@
 
     <body>
         <h1>遊戲實驗室</h1>
-        <h3>在CococsCreator設定測試環境</h3>
-        <ol>
-            <li>將"Test"資料夾放在專案的資料夾底下，如下呈現：(ProjectFolder / Test)。</li>
-            <br>
-            <li>將"package.json"放在專案的資料夾底下，如下呈現：(ProjectFolder / package.json)。</li>
-            <br>
-            <li>打開"Command Line"並且導覽到專案資料夾底下。</li>
-            <br>
-            <li>在"Command Line"中輸入"npm install"，並且按下"Enter"運行。</li>
-            <br>
-            <li>接著輸入"npm test" ,然後會在專案視窗中看到"mochawesome-report"的資料夾。</li>
-            <br>
-            <li>點選資料夾檔案中的mochawesome.html"，來瀏覽報告。</li>
-        </ol>
-        <h3>在CococsCreator設定 DI </h3>
-        <ol>
-            <li>使用 npm 安裝 Inversify。</li>
-            <br>
-            <li>引入inversify模組 : import { Container, ContainerModule, interfaces } from "inversify";</li>
-            <br>
-            <li>產生一個container : const myContainer = new Container();</li>
-            <br>
-            <li>用inversify的模組來定義物件相依條件 :
+        
+        <section>
+            <article class="post">
+                <h3>CococsCreator測試環境架設</h3>
                 <p>
-                    let DTBind = new ContainerModule(
-                    <br>
-                    (bind: interfaces.Bind, unbind: interfaces.Unbind) => {
-                    <br>
-                    bind(TestDI).toSelf();});
-                    <br>
+                   如何在 Cocos Creator裡面新增一個單元測試的環境呢?如何將測試的結果透過html檔案輸出呢?<br>
+                   本篇文章會介紹兩個套件 "mocha"測試框架，和 "chai"斷言套件來建構出一個測試框架。
                 </p>
-            </li>
-            <br>
-            <li>使用load()來載入定義好的模組 : myContainer.load(DTBind )
+                <a href="testingSetting.html">閱讀更多</a>
 
-        </ol>
+            </article>
+
+            <article class="post">
+                    <h3>CococsCreator DI(dependency injection) 環境架設</h3>
+                    <p>
+                        相信在 Cocos Creator裡面使用 type script 專案的朋友們，往往會遇到一個問題<br>
+                        那就是如何實現DI(dependency injection)，在這篇文章中我們將使用Inversify來實現(依賴注入) 的框架。
+                    </p>
+                    <a href="DISetting.html">閱讀更多</a>
+                </article>
+
+        </section>
+        
+        
+        
+        
     </body>
 
 </html>
