@@ -8,15 +8,22 @@
         <ol>
             <li>打開"Command Line"並且導覽到專案資料夾底下。</li>
             <br>
+
             <li>使用git clone此資料
                     <a href="https://github.com/LEEYUEHLU/PluginForCocosCreator.git"> 
                         https://github.com/LEEYUEHLU/PluginForCocosCreator.git</a>
             </li>
             <br>
+
+            <li>在專案新增inversify.config.ts</li>
+            <br>
+
             <li>引入inversify模組 : import { Container, ContainerModule, interfaces } from "inversify";</li>
             <br>
+
             <li>產生一個container : const myContainer = new Container();</li>
             <br>
+
             <li>用inversify的模組來定義物件相依條件 :
                 <p>
                     let DTBind = new ContainerModule(
@@ -28,6 +35,7 @@
                 </p>
             </li>
             <br>
+            
             <li>使用load()來載入定義好的模組 : myContainer.load(DTBind )
         </ol>
         <a href="index.html">返回主頁</a>
